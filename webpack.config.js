@@ -11,7 +11,7 @@ module.exports = {
         tickets: "./assets/js/tickets.js"
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: __dirname + '/dist',
         filename: "[name].bundle.js"
     },
     plugins: [
@@ -41,7 +41,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jpg$/i,
+                test: /\.(png|jpe?g|gif)$/i,
                 use: [
                     {
                       loader: "file-loader",
